@@ -9,7 +9,7 @@ const NewsItem = props => {
             <ListItem role={undefined} dense button onClick={() => handleClick(index)}>
                 <ListItemText primary={text.slice(0, 40) + '...'} />
                 <ListItemSecondaryAction>
-                    <IconButton aria-label="Open">{isOpen ? <ExpandMore /> : <ExpandLess />}</IconButton>
+                    <IconButton aria-label="Open">{isOpen === index ? <ExpandLess /> : <ExpandMore />}</IconButton>
                 </ListItemSecondaryAction>
             </ListItem>
             <Collapse in={isOpen === index}>
